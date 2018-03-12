@@ -1,0 +1,116 @@
+{% extends "./layout.html" %}
+
+{% block content_title %}
+Cell Edit
+{% endblock%}
+
+{% block inject_to_head %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12">
+        <form id="formUpdate" autocomplete="off">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr><td>Net Group：</td> <td><span id="netname"></span></td></tr>
+                        <tr><td>IP：</td> <td><span id="address"></span></td></tr>
+                        <tr><td>Netmask: </td> <td><span id="subnet"></span></td></tr>
+                        <tr><td>Cell Version: </td> <td><span id="version"></span></td></tr>
+                        <tr>
+                            <td>MAC 地址</td>
+                            <td><input type="text" class="form-control" id="mac" name="mac"  placeholder="请输入MAC" maxlength="12"></td>
+                        </tr>
+    
+                        <tr>
+                            <td>主机名称</td>
+                            <td><input type="text" class="form-control" id="hostname" name="hostname" placeholder="请输入主机名" maxlength="20"></td>
+                        </tr>
+
+                        <tr>
+                            <td>主机密码</td>
+                            <td><input type="text" class="form-control" id="password" name="password" placeholder="请输入路由器密码" maxlength="20"></td>
+                        </tr>
+
+                        <tr>
+                            <td>型号</td>
+                            <td><input type="text" class="form-control" id="model" name="model" placeholder="请输入路由器型号" maxlength="20"></td>
+                        </tr>
+
+                        <tr>
+                            <td>固件版本</td>
+                            <td><input type="text" class="form-control" id="fv" name="fv" placeholder="请输入固件版本"  maxlength="30"></td>
+                        </tr>
+
+                        <tr>
+                            <td>序列号</td>
+                            <td><input type="text" class="form-control" id="sn" name="sn" placeholder="请输入路由器序列号" maxlength="50"></td>
+                        </tr>
+
+                        <tr>
+                            <td>宽带账号</td>
+                            <td><input type="text" class="form-control" id="adsl_id" name="adsl_id" placeholder="请输入宽带账号"  maxlength="30"></td>
+                        </tr>
+
+                        <tr>
+                            <td>宽带密码</td>
+                            <td><input type="text" class="form-control" id="adsl_key" name="adsl_key" placeholder="请输入宽带密码"  maxlength="30"></td>
+                        </tr>
+
+                        <tr>
+                            <td>2.4G 无线SSID</td>
+                            <td><input type="text" class="form-control" id="ssid" name="ssid" placeholder="请输入2.4G 无线SSID"  maxlength="30"></td>
+                        </tr>
+
+                        <tr>
+                            <td>2.4G 无线密码</td>
+                            <td><input type="text" class="form-control" id="wifikey" name="wifikey" placeholder="请输入2.4G 无线密码"  maxlength="30"></td>
+                        </tr>
+
+                        <tr>
+                            <td>部署区域</td>
+                            <td><input type="text" class="form-control" id="area" name="area" placeholder="请输入部署区域" maxlength="50"></td>
+                        </tr>
+
+                        <tr>
+                            <td>部署地址</td>
+                            <td><input type="text" class="form-control" id="location" name="location" placeholder="请输入部署地址" maxlength="50"></td>
+                        </tr>
+
+                        <tr>
+                            <td>部署场景</td>
+                            <td><input type="text" class="form-control" id="scene" name="scene" placeholder="请输入部署场景" maxlength="50"></td>
+                        </tr>
+
+                        <tr>
+                            <td>备注</td>
+                            <td><textarea class="form-control" name="note" id="scene" cols="30" rows="10"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="submit" class="btn btn-primary" id="btnUpdate">提交</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.table-responsive -->
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="/js/page.js"></script>
+<script src="/page/cellEdit.js"></script>
+{% endblock %}

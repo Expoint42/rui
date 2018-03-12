@@ -1,0 +1,30 @@
+{
+  "name": "billion_server",
+  "version": "1.0.0",
+  "description": "Yep! billioner!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ianki.cn:billion_server"
+  },
+  "author": "hexcola",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "colors": "^1.1.2",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nunjucks": "^3.0.1",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
