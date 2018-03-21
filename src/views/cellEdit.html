@@ -17,7 +17,7 @@ Cell Edit
                 <table class="table">
                     <tbody>
                         <tr><td>Net Group：</td> <td><span id="netname"></span></td></tr>
-                        <tr><td>IP：</td> <td><span id="address"></span></td></tr>
+                        <tr><td>IP：</td> <td><span id="tIp"></span></td></tr>
                         <tr><td>Netmask: </td> <td><span id="subnet"></span></td></tr>
                         <tr><td>Cell Version: </td> <td><span id="version"></span></td></tr>
                         <tr>
@@ -52,12 +52,12 @@ Cell Edit
 
                         <tr>
                             <td>宽带账号</td>
-                            <td><input type="text" class="form-control" id="adsl_id" name="adsl_id" placeholder="请输入宽带账号"  maxlength="30"></td>
+                            <td><input type="text" class="form-control" id="adslId" name="adslId" placeholder="请输入宽带账号"  maxlength="30"></td>
                         </tr>
 
                         <tr>
                             <td>宽带密码</td>
-                            <td><input type="text" class="form-control" id="adsl_key" name="adsl_key" placeholder="请输入宽带密码"  maxlength="30"></td>
+                            <td><input type="text" class="form-control" id="adslKey" name="adslKey" placeholder="请输入宽带密码"  maxlength="30"></td>
                         </tr>
 
                         <tr>
@@ -67,7 +67,7 @@ Cell Edit
 
                         <tr>
                             <td>2.4G 无线密码</td>
-                            <td><input type="text" class="form-control" id="wifikey" name="wifikey" placeholder="请输入2.4G 无线密码"  maxlength="30"></td>
+                            <td><input type="text" class="form-control" id="wifiKey" name="wifiKey" placeholder="请输入2.4G 无线密码"  maxlength="30"></td>
                         </tr>
 
                         <tr>
@@ -86,8 +86,13 @@ Cell Edit
                         </tr>
 
                         <tr>
+                            <td>tinc Public Key</td>
+                            <td><textarea class="form-control" name="tPubKey" id="tPubKey" cols="30" rows="15"></textarea></td>
+                        </tr>
+
+                        <tr>
                             <td>备注</td>
-                            <td><textarea class="form-control" name="note" id="scene" cols="30" rows="10"></textarea></td>
+                            <td><textarea class="form-control" name="note" id="note" cols="30" rows="10"></textarea></td>
                         </tr>
 
                         <tr>

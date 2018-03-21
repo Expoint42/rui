@@ -1,7 +1,7 @@
 {% extends "./layout.html" %}
 
 {% block content_title %}
-Routers
+Cells
 {% endblock%}
 
 {% block inject_to_head %}
@@ -13,7 +13,7 @@ Routers
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Routers List
+                Cell List
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -120,7 +120,7 @@ Routers
                         <tbody>
                             <tr><td>主机名称</td><td><span id="hostname" ></span></td></tr>
                             <tr><td>Net Group：</td> <td><span id="netname"></span></td></tr>
-                            <tr><td>IP：</td> <td><span id="address"></span></td></tr>
+                            <tr><td>IP：</td> <td><span id="tIp"></span></td></tr>
                             <tr><td>Netmask: </td> <td><span id="subnet"></span></td></tr>
                             <tr><td>Cell Version: </td> <td><span id="version"></span></td></tr>
                             <tr><td>MAC 地址</td><td><span id="mac" ></span></td></tr>
@@ -128,10 +128,10 @@ Routers
                             <tr><td>型号</td><td><span id="model" ></span></td></tr>
                             <tr><td>固件版本</td><td><span id="fv" ></span></td></tr>
                             <tr><td>序列号</td><td><span id="sn" ></span></td></tr>
-                            <tr><td>宽带账号</td><td><span id="adsl_id" ></span></td></tr>
-                            <tr><td>宽带密码</td><td><span id="adsl_key" ></span></td></tr>
+                            <tr><td>宽带账号</td><td><span id="adslId" ></span></td></tr>
+                            <tr><td>宽带密码</td><td><span id="adslKey" ></span></td></tr>
                             <tr><td>2.4G 无线SSID</td><td><span id="ssid" ></span></td></tr>
-                            <tr><td>2.4G 无线密码</td><td><span id="wifikey" ></span></td></tr>
+                            <tr><td>2.4G 无线密码</td><td><span id="wifiKey" ></span></td></tr>
                             <tr><td>部署区域</td><td><span id="area" ></span></td></tr>
                             <tr><td>部署地址</td><td><span id="location" ></span></td></tr>
                             <tr><td>部署场景</td><td><span id="scene" ></span></td></tr>
@@ -178,6 +178,6 @@ Routers
 {% block script %}
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-<script src="/js/page.js"></script>
+<!-- <script src="/js/page.js"></script> -->
 <script src="/page/cells.js"></script>
 {% endblock %}

@@ -9,13 +9,15 @@ $(document).ready(function() {
         "info": true,
         // https://datatables.net/release-datatables/examples/basic_init/dom.html
         // "dom": '<t><"row" <"col-lg-3" l><"col-lg-3" i><"col-lg-6" p>>',
-        "ajax": api_server + "/cell",
+        "ajax": {
+            'url': api_server + "/cell"
+        },
         // Generated content for a column: https://datatables.net/examples/ajax/null_data_source.html
         columnDefs: [
             { targets:0, data: null, defaultContent: '<input type="checkbox">'},
             { targets:1, data: "mac" },
             { targets:2, data: "hostname" },
-            { targets:3, data: "address" },
+            { targets:3, data: "tIp" },
             { targets:4, data: "model" },
             { targets:5, data: "fv" },
             { targets:6, data: "location" },
@@ -60,7 +62,7 @@ $(document).ready(function() {
         var data = table.row( $(this).parents('tr') ).data();
         console.log(data)
         $("#netname").html(data.netname);
-        $("#address").html(data.address);
+        $("#tIp").html(data.address);
         $("#subnet").html(data.subnet);
         $("#version").html(data.version);
         $("#mac").html(data.mac);
@@ -69,10 +71,10 @@ $(document).ready(function() {
         $("#model").html(data.model);
         $("#fv").html(data.fv);
         $("#sn").html(data.sn);
-        $("#adsl_id").html(data.adsl_id);
-        $("#adsl_key").html(data.adsl_key);
+        $("#adslId").html(data.adsl_id);
+        $("#adslKey").html(data.adsl_key);
         $("#ssid").html(data.ssid);
-        $("#wifikey").html(data.wifikey);
+        $("#wifiKey").html(data.wifikey);
         $("#area").html(data.area);
         $("#location").html(data.location);
         $("#scene").html(data.scene);

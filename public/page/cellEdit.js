@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     function refreshData(data) {
         $("#netname").html(data.netname);
-        $("#address").html(data.address);
+        $("#tIp").html(data.tIp);
         $("#subnet").html(data.subnet);
         $("#version").html(data.version);
         $("#mac").val(data.mac);
@@ -13,10 +13,10 @@ $(document).ready(function() {
         $("#model").val(data.model);
         $("#fv").val(data.fv);
         $("#sn").val(data.sn);
-        $("#adsl_id").val(data.adsl_id);
-        $("#adsl_key").val(data.adsl_key);
+        $("#adslId").val(data.adslId);
+        $("#adslKey").val(data.adslKey);
         $("#ssid").val(data.ssid);
-        $("#wifikey").val(data.wifikey);
+        $("#wifiKey").val(data.wifiKey);
         $("#area").val(data.area);
         $("#location").val(data.location);
         $("#scene").val(data.scene);
